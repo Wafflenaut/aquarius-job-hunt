@@ -1,0 +1,27 @@
+MongoDB Collection Specifications
+
+jobs: {
+  jobTitle: "",
+  company: "",
+  city: "",
+  state: "",
+  date: "",     // date job was posted. Used to sort jobs by recently posted
+  snippet: "",
+  url: "",
+  latitude: "",
+  longitude: "",
+  jobKey: "",
+  jobType: "",
+  crawled: true or false,
+  source: "",       // Usually "Indeed"
+  // More elements to be retrieved by scraping and updated into documents
+}
+,
+users: {
+  username: "",    // unique "key"
+  passwordHash: "",    // to later implement user login
+  searchPreferences: [{type: "city", preference: "Los Angeles", strength: 3}],    // strength: -1 exclude, 0 neutral, 1, 2, 3 positive; type: "name of field in jobs collection"
+  buriedJobs: [<jobId0>, <jobId1>],
+  ignoredJobs: [<jobId0>, <jobId1>],
+  appliedJobs: [<jobId0>, <jobId1>],
+}

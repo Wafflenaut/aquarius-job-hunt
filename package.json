@@ -1,0 +1,47 @@
+{
+  "name": "aquarius-server",
+  "version": "0.0.1",
+  "private": true,
+  "engines": {
+    "node": "8.1.x"
+  },
+  "dependencies": {
+    "axios": "^0.17.1",
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "dotenv": "^4.0.0",
+    "express": "4.13.3",
+    "express-session": "^1.15.5",
+    "fs": "0.0.2",
+    "geojson-tools": "^0.2.2",
+    "jsonfile": "^4.0.0",
+    "lodash": "^4.17.4",
+    "mongodb": "^2.2.33",
+    "morgan": "^1.8.2",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "react-slider": "^0.9.0",
+    "request": "^2.83.0"
+  },
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "node server.js",
+    "client": "node start-client.js",
+    "dev": "echo \"This command has been deprecated. Use 'npm start'\" && exit 1",
+    "lint": "eslint .",
+    "indeed": "node ./server/indeedScheduler.js",
+    "crawl-indeed": "python ./server/indeed-crawler.py",
+    "crawl-jobs": "python ./server/aquarius-scraper.py",
+    "production": "cd client && npm run build && cd .. && git add . && git commit -m 'production build' && git push && git push heroku master"
+  },
+  "devDependencies": {
+    "concurrently": "3.1.0",
+    "eslint": "3.15.0",
+    "eslint-config-airbnb": "14.1.0",
+    "eslint-plugin-import": "2.2.0",
+    "eslint-plugin-jsx-a11y": "4.0.0",
+    "eslint-plugin-react": "6.9.0"
+  }
+}
