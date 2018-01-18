@@ -1,9 +1,5 @@
-# How to run
-`cd client` -> `npm i`
+# Where to view
+http://aquarius467.herokuapp.com
 
-`cd ..` -> `npm i`
-
-`npm start`
-
-`http://localhost:3000`
-# aquarius
+# Notes
+This is an archived version of the web app - it is no longer pulling active jobs nightly.  A sample login/username for viewing is adminuser/adminuser.
